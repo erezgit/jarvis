@@ -1,0 +1,16 @@
+# Jarvis Central Configuration
+# IMPORTANT: Copy this file to .env and update with your actual values
+# The .env file is excluded from Git to keep your keys secure
+
+# OpenAI API Keys
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Voice Configuration
+DEFAULT_VOICE=echo  # Options: alloy, echo, fable, onyx, nova, shimmer
+DEFAULT_MODEL=tts-1  # Options: tts-1, tts-1-hd
+OUTPUT_DIR=workspace/generated_audio
+
+# Other API Keys
+# Add any additional service API keys below
+# GITHUB_TOKEN=your_github_token_here
+# RUNWAY_API_KEY=your_runway_api_key_here 

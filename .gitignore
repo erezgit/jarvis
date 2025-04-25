@@ -19,7 +19,17 @@ var/
 .installed.cfg
 *.egg
 venv/
+
+# API Keys and Sensitive Data (NEVER COMMIT THESE)
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+workspace/tools/jarvis_voice.sh
+infrastructure/workspace/tools/jarvis_voice.sh
+infrastructure/config/.env
 
 # macOS
 .DS_Store
@@ -40,14 +50,6 @@ workspace/generated_audio/
 Jarvis/workspace/generated_images/
 workspace/generated_images/
 infrastructure/venv/
-
-# API Keys and Sensitive Data
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.pem
-**/jarvis_voice.sh
 
 # IDE
 .vscode/
