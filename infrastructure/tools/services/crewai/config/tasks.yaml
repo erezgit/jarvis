@@ -1,0 +1,55 @@
+# Task definitions for CrewAI newsletter team
+
+newsletter_planning:
+  description: >
+    Plan the newsletter content about {topic}.
+    Consider the target audience, key sections, and overall theme.
+    Determine which topics should be covered and how they should be presented.
+  expected_output: >
+    A comprehensive newsletter plan with theme, key sections, and content direction.
+  agent: design_ceo
+
+content_research:
+  description: >
+    Research the latest information about {topic}.
+    Find recent developments, trends, expert opinions, and relevant statistics.
+    Identify the most important and interesting aspects to highlight.
+  expected_output: >
+    A detailed research summary with key findings and supporting information.
+  agent: content_manager
+
+creative_concept:
+  description: >
+    Develop creative concepts for presenting content about {topic}.
+    Think of innovative ways to explain complex AI concepts visually and verbally.
+    Consider unique angles, metaphors, or storytelling approaches.
+  expected_output: >
+    A set of creative concepts with rationales for how they enhance the newsletter.
+  agent: creative_manager
+
+visual_design:
+  description: >
+    Design visual elements for the newsletter sections about {topic}.
+    Create concepts for header images, infographics, or other visual components.
+    Provide clear descriptions that could be used with image generation tools.
+  expected_output: >
+    Detailed descriptions of visual elements with purpose and placement in the newsletter.
+  agent: designer
+
+article_writing:
+  description: >
+    Write engaging article content about {topic} based on the research and creative direction.
+    Focus on making complex concepts accessible while maintaining accuracy.
+    Include a compelling headline, introduction, and conclusion.
+  expected_output: >
+    A well-structured article with appropriate sections, formatted in markdown.
+  agent: writer
+
+final_review:
+  description: >
+    Review all content created for the newsletter about {topic}.
+    Ensure consistency of voice, quality of information, and alignment with objectives.
+    Provide final approval or suggest specific improvements.
+  expected_output: >
+    A final assessment with approval or specific improvement requests.
+  agent: design_ceo 

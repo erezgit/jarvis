@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Main UI Colors - Pure Greys */
+    --sidebar-background: 0 0% 6%; /* Pure dark grey for sidebar */
+    --page-background: 0 0% 10%; /* Pure medium grey for page */
+    --highlight-background: 0 0% 14%; /* Pure light grey for interactive elements */
+
+    /* Example: Same colors with more saturation to show the blue */
+    --example-blue-dark: 220 50% 6%; /* More noticeable blue, but still very dark */
+    --example-blue-medium: 220 50% 10%; /* More noticeable blue, medium dark */
+    --example-blue-light: 220 50% 18%; /* More noticeable blue, lighter */
+
+    /* Example: Pure blue variations */
+    --example-pure-blue-dark: 220 100% 6%; /* Pure blue, very dark */
+    --example-pure-blue-medium: 220 100% 10%; /* Pure blue, medium */
+    --example-pure-blue-light: 220 100% 18%; /* Pure blue, lighter */
+
+    /* Example: Pure greys (0% saturation = no color) */
+    --example-pure-grey-dark: 0 0% 6%; /* Pure dark grey */
+    --example-pure-grey-medium: 0 0% 10%; /* Pure medium grey */
+    --example-pure-grey-light: 0 0% 18%; /* Pure light grey */
+
+    /* Existing theme colors */
+    --background: var(--page-background);
+    --foreground: 0 0% 98%;
+
+    --card: var(--highlight-background);
+    --card-foreground: 0 0% 98%;
+
+    --popover: var(--highlight-background);
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: var(--highlight-background);
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: var(--highlight-background);
+    --muted-foreground: 0 0% 65%;
+
+    --accent: var(--highlight-background);
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: var(--highlight-background);
+    --input: var(--highlight-background);
+    --ring: 0 0% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+}

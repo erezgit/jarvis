@@ -1,0 +1,3 @@
+"""
+CrewAI newsletter generation service.
+""" 

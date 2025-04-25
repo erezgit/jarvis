@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Kill any existing Vite processes
+echo "Checking for existing Vite processes..."
+pkill -f vite || true
+echo "Any existing Vite processes have been terminated."
+
+# Kill any Node.js processes related to the development server
+echo "Checking for Node.js processes related to the development server..."
+pkill -f "node.*vite" || true
+echo "Any Node.js processes related to the development server have been terminated."
+
+# List any processes still using port 3000
+echo "Checking for processes using port 3000..."
+lsof -i :3000 || true
+
+echo "Cleanup completed." 

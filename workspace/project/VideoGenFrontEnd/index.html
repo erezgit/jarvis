@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Generation Frontend</title>
+    <!-- Set PayPal client ID globally before any other scripts run -->
+    <script>
+      window.PAYPAL_CLIENT_ID = 'AaV4wvSOsPdK2Ypgz5B_njXwjBVJJsK29hwyvrxZh5VbvAnXqJC0Y6rF8tK3ZNkFFbnBG_ecLvYDNMm9';
+      console.log('[PayPal] Set global client ID:', window.PAYPAL_CLIENT_ID);
+    </script>
+    <style>
+      /* Hide PayPal button */
+      .paypal-button-layout-vertical .paypal-button-number-0,
+      .paypal-button-row.paypal-button-number-0,
+      .paypal-button-color-gold,
+      [data-funding-source="paypal"],
+      div[data-funding-source="paypal"],
+      button[data-funding-source="paypal"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+      }
+
+      /* Ensure the card button is visible */
+      [data-funding-source="card"],
+      div[data-funding-source="card"],
+      button[data-funding-source="card"],
+      .paypal-button-layout-vertical .paypal-button-number-1,
+      .paypal-button-row.paypal-button-number-1,
+      .paypal-button-color-black {
+        display: block !important;
+        width: 100% !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+    </style>
+    <script>
+      // This function will run after the page loads to hide PayPal buttons
+      document.addEventListener('DOMContentLoaded', function() {
+        function hidePayPalButton() {
+          console.log('[PayPal] Attempting to hide PayPal button');
+          
+          // Target specific elements
+          const paypalButtons = document.querySelectorAll(
+            '[data-funding-source="paypal"], .paypal-button-color-gold, ' +
+            '.paypal-button-layout-vertical .paypal-button-number-0, ' +
+            '.paypal-button-row.paypal-button-number-0'
+          );
+          
+          paypalButtons.forEach(button => {
+            button.style.display = 'none';
+            button.style.visibility = 'hidden';
+            button.style.opacity = '0';
+            button.style.height = '0';
+            console.log('[PayPal] Hidden button:', button);
+          });
+          
+          // Look for buttons in iframes
+          document.querySelectorAll('iframe').forEach(iframe => {
+            try {
+              if (iframe.src && iframe.src.includes('paypal.com')) {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // Add styles to the iframe
+                const style = document.createElement('style');
+                style.textContent = `
+                  [data-funding-source="paypal"], .paypal-button-color-gold {
+                    display: none !important;
+                    visibility: hidden !important;
+                    opacity: 0 !important;
+                    height: 0 !important;
+                  }
+                  [data-funding-source="card"], .paypal-button-color-black {
+                    display: block !important;
+                    width: 100% !important;
+                  }
+                `;
+                iframeDoc.head.appendChild(style);
+                console.log('[PayPal] Added styles to iframe');
+              }
+            } catch (e) {
+              // Ignore cross-origin errors
+            }
+          });
+        }
+        
+        // Run initially
+        hidePayPalButton();
+        
+        // Run again after a delay to catch dynamically rendered buttons
+        setTimeout(hidePayPalButton, 1000);
+        setTimeout(hidePayPalButton, 2000);
+      });
+    </script>
+  </head>
+  <body class="bg-background text-foreground">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

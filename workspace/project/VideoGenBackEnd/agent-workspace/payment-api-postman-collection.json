@@ -1,0 +1,356 @@
+{
+  "info": {
+    "name": "Payment API",
+    "description": "Collection for testing the Payment API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Token Packages",
+      "item": [
+        {
+          "name": "Create Order - Basic Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"packageId\": \"basic\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/createOrder",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "createOrder"]
+            },
+            "description": "Create a payment order for the Basic package ($10, 160 tokens)"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Order - Standard Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"packageId\": \"standard\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/createOrder",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "createOrder"]
+            },
+            "description": "Create a payment order for the Standard package ($25, 425 tokens)"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Order - Premium Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"packageId\": \"premium\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/createOrder",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "createOrder"]
+            },
+            "description": "Create a payment order for the Premium package ($50, 900 tokens)"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for creating orders for different token packages"
+    },
+    {
+      "name": "Payment Processing",
+      "item": [
+        {
+          "name": "Capture Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"orderId\": \"{{orderId}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/capturePayment",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "capturePayment"]
+            },
+            "description": "Capture a payment for a previously created order"
+          },
+          "response": []
+        },
+        {
+          "name": "Mock Payment Process",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"amount\": 25.00,\n    \"currency\": \"USD\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/mock/process",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "mock", "process"]
+            },
+            "description": "Process a mock payment directly (for testing)"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for processing payments"
+    },
+    {
+      "name": "Payment Methods",
+      "item": [
+        {
+          "name": "List Payment Methods",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payments/methods",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "methods"]
+            },
+            "description": "List all payment methods for the current user"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Payment Method",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"paymentMethodId\": \"pm_card_visa\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/methods",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "methods"]
+            },
+            "description": "Add a new payment method for the current user"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Payment Method",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payments/methods/{{methodId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "methods", "{{methodId}}"]
+            },
+            "description": "Remove a payment method for the current user"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for managing payment methods"
+    },
+    {
+      "name": "Token Management",
+      "item": [
+        {
+          "name": "Get Token Balance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payments/tokens/balance",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "tokens", "balance"]
+            },
+            "description": "Get the token balance for the current user"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Token Transactions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payments/tokens/transactions?limit=10&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "tokens", "transactions"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            },
+            "description": "Get token transaction history for the current user"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for managing tokens"
+    },
+    {
+      "name": "Payment History",
+      "item": [
+        {
+          "name": "Get Payment History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payments/history?limit=10&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "history"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            },
+            "description": "Get payment history for the current user"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for viewing payment history"
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000/api",
+      "type": "string"
+    },
+    {
+      "key": "authToken",
+      "value": "YOUR_AUTH_TOKEN",
+      "type": "string"
+    },
+    {
+      "key": "orderId",
+      "value": "mock_order_id",
+      "type": "string"
+    },
+    {
+      "key": "methodId",
+      "value": "method_id",
+      "type": "string"
+    }
+  ]
+} 

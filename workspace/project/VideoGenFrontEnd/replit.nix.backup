@@ -1,0 +1,22 @@
+{
+  description = "Node.js environment for React SPA";
+  
+  nixConfig = {
+    bash-prompt = "\[nix-develop\]$ ";
+  };
+
+  deps = {
+    pkgs = import <nixpkgs> {};
+  };
+
+  env = {
+    NODEJS_VERSION = "20";
+  };
+
+  packages = with deps.pkgs; [
+    nodejs_20
+    nodePackages.typescript-language-server
+    nodePackages.yarn
+    nodePackages.npm
+  ];
+}

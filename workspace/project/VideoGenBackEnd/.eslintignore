@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test files
+**/*.test.ts
+**/__tests__/
+
+# Legacy code
+VideoGenBackEnd-BeforeRefactoring/
+
+# Generated files
+*.d.ts
+
+# Config files
+.eslintrc.js
+jest.config.js
+jest.config.test.js
+
+# Cache directories
+.cache/
+.upm/ 
