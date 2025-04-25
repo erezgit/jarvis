@@ -6,7 +6,7 @@ We've identified inconsistencies in how different Jarvis tools access and use th
 
 1. **Voice Generation**: Currently hardcodes the API key in `jarvis_voice.sh`:
    ```bash
-   API_KEY="***REMOVED***"
+   API_KEY="sk-your-api-key-goes-here"
    ```
 
 2. **Image Generation**: Attempts to read from environment variables or config file:
