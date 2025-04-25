@@ -1,5 +1,5 @@
 # Jarvis Central Configuration
-# IMPORTANT: Copy this file to .env and update with your actual values
+# IMPORTANT: Copy this file to infrastructure/config/.env and update with your actual values
 # The .env file is excluded from Git to keep your keys secure
 
 # OpenAI API Keys
