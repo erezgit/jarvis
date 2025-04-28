@@ -42,8 +42,18 @@ def generate_voice(
         Dictionary containing status and file path
     """
     try:
+<<<<<<< HEAD
         # Load environment variables if not done already
         load_dotenv()
+=======
+        # Get project root directory
+        project_root = Path(__file__).parent.parent.parent.parent.parent
+        
+        # Load environment variables from infrastructure/config/.env
+        config_env_path = project_root / "infrastructure" / "config" / ".env"
+        if config_env_path.exists():
+            load_dotenv(dotenv_path=config_env_path)
+>>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
         
         # Set up OpenAI API key - IMPORTANT: strip any whitespace
         api_key = api_key or os.getenv("OPENAI_API_KEY")
@@ -53,7 +63,11 @@ def generate_voice(
         if not api_key:
             return {
                 "success": False,
+<<<<<<< HEAD
                 "error": "OpenAI API key not found. Please provide it as a parameter or set OPENAI_API_KEY environment variable.",
+=======
+                "error": "OpenAI API key not found. Please check infrastructure/config/.env file.",
+>>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
                 "text": text[:100] + "..." if len(text) > 100 else text
             }
         
@@ -127,4 +141,8 @@ def generate_voice(
             "error": str(e),
             "error_details": error_details,
             "text": text[:100] + "..." if len(text) > 100 else text
+<<<<<<< HEAD
         } 
+=======
+        }
+>>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d

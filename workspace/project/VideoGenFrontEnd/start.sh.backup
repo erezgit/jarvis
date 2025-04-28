@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "=== Starting cleanup process ==="
+
+# Kill any existing Vite processes
+echo "Checking for existing Vite processes..."
+pkill -f vite || true
+echo "Any existing Vite processes have been terminated."
+
+# Kill any Node.js processes related to the development server
+echo "Checking for Node.js processes related to the development server..."
+pkill -f "node.*vite" || true
+echo "Any Node.js processes related to the development server have been terminated."
+
+# Check if port 3000 is still in use
+echo "Checking if port 3000 is still in use..."
+if lsof -i :3000 > /dev/null 2>&1; then
+  echo "Port 3000 is still in use. Attempting to kill the process..."
+  fuser -k 3000/tcp || true
+  sleep 2
+fi
+
+# Check if port 4173 is still in use (preview port)
+echo "Checking if port 4173 is still in use..."
+if lsof -i :4173 > /dev/null 2>&1; then
+  echo "Port 4173 is still in use. Attempting to kill the process..."
+  fuser -k 4173/tcp || true
+  sleep 2
+fi
+
+# Wait a moment to ensure ports are released
+echo "Waiting for ports to be released..."
+sleep 2
+
+echo "=== Cleanup process completed ==="
+
+# Start the development server with specific host and port
+echo "Starting Vite development server..."
+# Use --host to bind to all interfaces and --port to specify port 3000
+yarn dev --host 0.0.0.0 --port 3000 

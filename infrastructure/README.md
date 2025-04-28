@@ -1,35 +1,46 @@
-# Jarvis Infrastructure
+# Jarvis
 
-This directory contains the core infrastructure components for Jarvis.
+Jarvis is an AI development partner designed to assist in software development tasks through natural conversation with voice feedback.
 
-## Directory Structure
+## Features
 
-- **config/**: Configuration files and templates
-- **docs/**: Documentation for infrastructure components
-- **src/**: Source code for core infrastructure
-  - **cli/**: Command-line interface tools
-  - **core/**: Core functionality modules
-    - **voice_generation/**: Voice generation services
-    - **image_generation/**: Image generation services
-  - **integrations/**: Integration with external services
+- **Voice-First Interaction**: Jarvis communicates through voice output for all interactions
+- **Cognitive Architecture**: Built with semantic, episodic, procedural, and structured memory systems
+- **Development Assistant**: Helps architect systems, generate code, debug issues, and explain concepts
 
-## Setup
+## Architecture
 
-The infrastructure components are automatically set up by the main `setup.sh` script at the root of the repository. This includes:
+Jarvis' architecture is organized around a cognitive memory model:
 
-1. Environment configuration
-2. Required Python packages
-3. Script permissions
+- **Semantic Memory**: Core concepts, relationships, and knowledge
+- **Episodic Memory**: Conversations and session histories
+- **Procedural Memory**: Workflows and templates for tasks
+- **Structured Memory**: Projects, entities, and structured data
 
-## Usage
+## Getting Started
 
-Most infrastructure components are not used directly but are called through the scripts in the `workspace/tools/` directory.
+```bash
+# Clone the repository
+git clone https://github.com/erezgit/Jarvis.git
 
-## Development
+# Set up the environment
+cd Jarvis
+# Additional setup instructions will be added
+```
 
-When developing new infrastructure components:
+## Project Structure
 
-1. Add appropriate documentation in the `docs/` directory
-2. Create tests for your components
-3. Update the setup script if necessary
-4. Ensure no API keys or credentials are hardcoded 
+```
+jarvis/
+├── infrastructure/    # Core system infrastructure
+├── knowledge/         # Memory and knowledge base
+│   ├── jarvis/        # Jarvis domain knowledge
+│   │   ├── episodic_memory/    # Conversations and sessions
+│   │   ├── procedural_memory/  # Workflows and templates
+│   │   ├── semantic_memory/    # Concepts and relationships
+│   │   └── structured_memory/  # Projects and entities
+├── workspace/         # Working directory for Jarvis
+    ├── jarvis-app/    # Web application interface
+    ├── tools/         # Utility scripts and tools
+    └── generated_audio/  # Voice output files
+``` 

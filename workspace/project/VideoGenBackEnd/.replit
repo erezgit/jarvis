@@ -1,0 +1,43 @@
+run = "npm run dev"
+language = "nodejs"
+entrypoint = "src/index.ts"
+modules = ["nodejs-20"]
+
+[env]
+PORT = "3000"
+REPL_SLUG = "workspace"
+REPL_OWNER = "erezfern"
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+build = ["sh", "-c", "node --version && npm --version && npm install && npm run build"]
+run = ["sh", "-c", "npm start"]
+deploymentTarget = "cloudrun"
+directory = "/home/runner/workspace"
+protocol = "http"
+
+# Replit webview configuration
+[webview]
+port = 3000
+domain = "videogenbackend.erezfern.repl.co"
+
+[packager]
+language = "nodejs"
+ignoredPaths = [".git", "node_modules"]
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[languages.typescript]
+pattern = "**/*.{ts,tsx}"
+syntax = "typescript"
+
+[languages.typescript.languageServer]
+start = ["typescript-language-server", "--stdio"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# A simple pre-push hook that doesn't use the deprecated Husky format
+# This hook will run before pushing to the remote repository
+
+echo "Running pre-push hook..."
+
+# You can add your pre-push checks here
+# For example, running tests or linting
+
+# Exit with 0 to allow the push, non-zero to prevent it
+exit 0
+
+
+
+

@@ -63,8 +63,11 @@ def main():
                         help="Directory to save audio file (default: workspace/generated_audio)")
     parser.add_argument("--no-auto-play", action="store_true",
                         help="Don't automatically play the audio")
+<<<<<<< HEAD
     parser.add_argument("--api-key", 
                         help="OpenAI API key (overrides environment variable)")
+=======
+>>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
     
     args = parser.parse_args()
     
@@ -86,7 +89,10 @@ def main():
         voice=args.voice,
         model=args.model,
         output_dir=args.output_dir,
+<<<<<<< HEAD
         api_key=args.api_key,
+=======
+>>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
         response_format=args.format,
         speed=args.speed,
         filename_prefix="jarvis_response"

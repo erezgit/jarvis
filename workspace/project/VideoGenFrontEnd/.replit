@@ -1,0 +1,49 @@
+run = "npm run dev"
+language = "nodejs"
+entrypoint = "src/index.tsx"
+modules = ["nodejs-18:v18-20230623-c59c7ef"]
+hidden = [".config", "package-lock.json"]
+
+[env]
+PORT = "3000"
+REPL_SLUG = "workspace"
+REPL_OWNER = "erezfern"
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+deploymentTarget = "static"
+publicDir = "dist"
+build = ["npm", "run", "build"]
+
+[deployment.static]
+directory = "dist"
+fallback = "index.html"
+
+# Replit webview configuration
+[webview]
+port = 3000
+
+[languages]
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
+[languages.javascript.languageServer]
+start = ["typescript-language-server", "--stdio"]
+
+[languages.typescript]
+pattern = "**/{*.ts,*.tsx}"
+[languages.typescript.languageServer]
+start = "typescript-language-server --stdio"
+
+[packager]
+language = "nodejs"
+ignoredPaths = [".git", "node_modules"]
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[[ports]]
+localPort = 3000
+externalPort = 80

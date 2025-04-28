@@ -18,7 +18,11 @@ from typing import Optional
 PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+<<<<<<< HEAD
 from tools.src.core.voice_generation.generator import generate_voice
+=======
+from infrastructure.tools.src.core.voice_generation.generator import generate_voice
+>>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
 
 def extract_summary(text: str) -> Optional[str]:
     """

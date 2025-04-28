@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+
+# API Keys and Sensitive Data (NEVER COMMIT THESE)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+workspace/tools/jarvis_voice.sh
+infrastructure/workspace/tools/jarvis_voice.sh
+infrastructure/config/.env
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.next/
+
+# Jarvis specific
+Jarvis/workspace/generated_audio/
+workspace/generated_audio/
+Jarvis/workspace/generated_images/
+workspace/generated_images/
+infrastructure/venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Large binary files
+*.node
+*.dylib
+*.dll
+*.so
+*.so.*
+*.jar
+*.war
+*.ear 

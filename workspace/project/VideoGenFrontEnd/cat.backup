@@ -1,0 +1,11 @@
+core.excludesfile=/etc/.gitignore
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.hookspath=.husky/_
+branch.main.vscode-merge-base=origin/main
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+remote.origin.url=https://github.com/erezgit/VideoGenFrontEnd.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*

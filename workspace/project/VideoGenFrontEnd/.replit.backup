@@ -1,0 +1,15 @@
+run = "npm run dev"
+modules = ["nodejs-20"]
+hidden = [".config", "package-lock.json"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+deploymentTarget = "static"
+build = ["npm", "run", "build"]
+publicDir = "dist"
+
+[[ports]]
+localPort = 3000
+externalPort = 80 

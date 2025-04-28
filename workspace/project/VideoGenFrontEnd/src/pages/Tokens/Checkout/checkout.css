@@ -1,0 +1,48 @@
+/* Card fields validation styles */
+.card-field-valid {
+  position: relative;
+  border-color: #10b981 !important;
+  background-color: rgba(16, 185, 129, 0.05) !important;
+}
+
+.card-field-invalid {
+  position: relative;
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Add checkmark to valid fields */
+.card-field-valid::after {
+  content: "✓";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #10b981;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Custom styles for PayPal card fields containers */
+#paypal-card-fields-wrapper .border,
+#paypal-card-fields-wrapper-mobile .border {
+  transition: all 0.15s ease-in-out;
+}
+
+#paypal-card-fields-wrapper .p-3,
+#paypal-card-fields-wrapper-mobile .p-3 {
+  position: relative;
+}
+
+/* Ensure iframes within card fields are full width */
+#card-number iframe,
+#card-cvv iframe,
+#card-expiry iframe,
+#card-name iframe,
+#card-number-mobile iframe,
+#card-cvv-mobile iframe,
+#card-expiry-mobile iframe,
+#card-name-mobile iframe {
+  width: 100% !important;
+  height: 100% !important;
+} 
