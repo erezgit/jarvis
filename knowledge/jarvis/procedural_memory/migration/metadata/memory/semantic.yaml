@@ -1,0 +1,8 @@
+current_path: Jarvis/memory/semantic/
+cognitive_path: Cognitive/Memory/Semantic/
+cognitive_function: Storage of factual knowledge, concepts, and information independent of specific experiences
+dependencies:
+  - Jarvis/memory/index/
+  - Jarvis/memory/templates/
+migration_phase: 2
+migration_notes: Semantic memory contains general knowledge that spans across domains. In later phases, consider extracting domain-specific knowledge to appropriate Domains directories while keeping general knowledge here. 

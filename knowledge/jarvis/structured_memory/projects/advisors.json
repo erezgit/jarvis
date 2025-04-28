@@ -1,0 +1,78 @@
+{
+  "id": "project-advisors",
+  "name": "Advisors / Dreams",
+  "description": "AI advisor platform for specialized guidance",
+  "status": "active",
+  "priority": "high",
+  "created_at": "2025-02-10T09:00:00Z",
+  "last_updated": "2025-04-24T16:45:12Z",
+  
+  "current_phase": "enhancement",
+  "completion_percentage": 65,
+  
+  "resources": {
+    "repository": "https://github.com/example/advisors",
+    "documentation": "/app/advisors/documentation",
+    "webapp": "https://advisors.example.com"
+  },
+  
+  "team": [
+    {"name": "Erez", "role": "Product Owner"},
+    {"name": "Dev Team", "role": "Implementation"},
+    {"name": "Jarvis", "role": "Development Partner"}
+  ],
+  
+  "recent_activity": [
+    {
+      "date": "2025-04-24T16:45:12Z",
+      "description": "Implemented new advisor onboarding flow",
+      "type": "implementation"
+    },
+    {
+      "date": "2025-04-22T11:30:45Z",
+      "description": "Added analytics dashboard for advisor performance",
+      "type": "feature"
+    },
+    {
+      "date": "2025-04-20T09:15:30Z",
+      "description": "Fixed conversation history pagination bug",
+      "type": "bugfix"
+    }
+  ],
+  
+  "timeline": [
+    {
+      "id": "milestone-1",
+      "title": "MVP Launch",
+      "description": "Initial platform with basic advisor capabilities",
+      "start_date": "2025-02-10T09:00:00Z",
+      "end_date": "2025-03-30T17:00:00Z",
+      "status": "completed",
+      "completion_percentage": 100
+    },
+    {
+      "id": "milestone-2",
+      "title": "Platform Enhancement",
+      "description": "Expand capabilities and improve user experience",
+      "start_date": "2025-04-01T09:00:00Z",
+      "end_date": "2025-05-31T17:00:00Z",
+      "status": "in-progress",
+      "completion_percentage": 70
+    },
+    {
+      "id": "milestone-3",
+      "title": "Marketplace Launch",
+      "description": "Enable third-party advisor creation and marketplace",
+      "start_date": "2025-06-01T09:00:00Z",
+      "end_date": "2025-08-31T17:00:00Z",
+      "status": "planned",
+      "completion_percentage": 0
+    }
+  ],
+  
+  "metadata": {
+    "created_by": "jarvis",
+    "version": "1.0.0",
+    "tags": ["advisors", "dreams", "ai-platform", "guidance"]
+  }
+} 

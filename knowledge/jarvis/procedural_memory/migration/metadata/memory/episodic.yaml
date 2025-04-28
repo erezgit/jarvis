@@ -1,0 +1,7 @@
+current_path: Jarvis/memory/episodic/
+cognitive_path: Cognitive/Memory/Episodic/
+cognitive_function: Storage of experience-based memories including conversation history, project activities, and knowledge acquired through specific interactions
+dependencies:
+  - Jarvis/memory/index/
+migration_phase: 2
+migration_notes: The memory system already follows a cognitive organization, making it a good candidate for early migration in Phase 2. The episodic memory structure should be preserved intact. 

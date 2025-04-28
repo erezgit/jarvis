@@ -1,0 +1,77 @@
+{
+  "id": "project-jarvis",
+  "name": "Jarvis",
+  "description": "AI development partner with cognitive capabilities",
+  "status": "active",
+  "priority": "high",
+  "created_at": "2025-01-15T09:00:00Z",
+  "last_updated": "2025-04-25T10:02:58Z",
+  
+  "current_phase": "foundation-cognitive",
+  "completion_percentage": 35,
+  
+  "resources": {
+    "repository": "https://github.com/example/jarvis",
+    "documentation": "/Jarvis/workspace/documentation",
+    "webapp": "http://localhost:3000"
+  },
+  
+  "team": [
+    {"name": "Erez", "role": "Product Owner"},
+    {"name": "Jarvis", "role": "Development Partner"}
+  ],
+  
+  "recent_activity": [
+    {
+      "date": "2025-04-25T09:45:22Z",
+      "description": "Implemented memory directory structure",
+      "type": "implementation"
+    },
+    {
+      "date": "2025-04-24T14:30:12Z",
+      "description": "Designed memory system architecture",
+      "type": "design"
+    },
+    {
+      "date": "2025-04-23T11:20:00Z",
+      "description": "Updated documentation page with brain models",
+      "type": "documentation"
+    }
+  ],
+  
+  "timeline": [
+    {
+      "id": "milestone-1",
+      "title": "Foundation Cognitive",
+      "description": "Implement knowledge, skills, workspace, and multi-project support",
+      "start_date": "2025-01-15T09:00:00Z",
+      "end_date": "2025-05-30T17:00:00Z",
+      "status": "in-progress",
+      "completion_percentage": 65
+    },
+    {
+      "id": "milestone-2",
+      "title": "Hybrid Enhancement",
+      "description": "Add perception and reasoning, enhance memory capabilities",
+      "start_date": "2025-06-01T09:00:00Z",
+      "end_date": "2025-08-31T17:00:00Z",
+      "status": "planned",
+      "completion_percentage": 0
+    },
+    {
+      "id": "milestone-3",
+      "title": "Self Learning",
+      "description": "Implement advanced cognitive functions and autonomous improvement",
+      "start_date": "2025-09-01T09:00:00Z",
+      "end_date": "2025-12-15T17:00:00Z",
+      "status": "planned",
+      "completion_percentage": 0
+    }
+  ],
+  
+  "metadata": {
+    "created_by": "jarvis",
+    "version": "1.0.0",
+    "tags": ["ai", "cognitive", "memory-system", "development-partner"]
+  }
+} 

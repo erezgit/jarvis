@@ -1,0 +1,7 @@
+current_path: Jarvis/instructions/rules.md
+cognitive_path: Cognitive/Reasoning/Guidelines/Constraints/rules.md
+cognitive_function: Operational constraints and boundaries for Jarvis's reasoning and behavior
+dependencies:
+  - Jarvis/instructions/jarvis.md
+migration_phase: 3
+migration_notes: This file contains critical operational boundaries. Migrate alongside jarvis.md to maintain consistency between core operational documents. 

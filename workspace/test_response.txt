@@ -1,0 +1,9 @@
+# Jarvis Voice Generation Test
+
+Here's a test response from Jarvis to demonstrate the voice generation capabilities.
+
+I've created several tools that will allow me to speak to you rather than requiring you to read my responses. This should make our interaction more natural and efficient.
+
+## Summary
+
+I've implemented a voice generation system that converts my text responses to speech using OpenAI's TTS API. You can now have me read my responses aloud, automatically extract summaries, and even set up auto-conversion of responses. The tools are ready to use with various customization options like different voices, speech speeds, and output formats. 

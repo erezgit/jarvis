@@ -1,0 +1,7 @@
+current_path: Jarvis/instructions/about.md
+cognitive_path: Cognitive/Expression/Communication/UserFacing/about.md
+cognitive_function: User-facing introduction and self-concept that guides how Jarvis expresses its identity and purpose
+dependencies:
+  - Jarvis/instructions/jarvis.md
+migration_phase: 3
+migration_notes: This file shapes Jarvis's communication with users. In the cognitive model, it belongs to Expression rather than Reasoning because it guides outward communication. 

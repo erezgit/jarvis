@@ -1,0 +1,8 @@
+current_path: Jarvis/instructions/voice.md
+cognitive_path: Cognitive/Expression/Voice/Guidelines/voice.md
+cognitive_function: Guidelines for voice generation and spoken communication
+dependencies:
+  - Jarvis/workspace/tools/jarvis_voice.sh
+  - Jarvis/tools/src/core/voice_generation/
+migration_phase: 3
+migration_notes: This file is closely tied to voice tools and should be migrated alongside them to maintain functionality. Voice capability is part of the Expression cognitive process. 

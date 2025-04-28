@@ -27,8 +27,6 @@ venv/
 .env.test.local
 .env.production.local
 *.pem
-workspace/tools/jarvis_voice.sh
-infrastructure/workspace/tools/jarvis_voice.sh
 infrastructure/config/.env
 
 # macOS

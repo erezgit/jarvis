@@ -1,0 +1,8 @@
+current_path: Jarvis/instructions/jarvis.md
+cognitive_path: Cognitive/Reasoning/Guidelines/Core/jarvis.md
+cognitive_function: Core operational guidelines that define Jarvis's reasoning processes, behavior, and capabilities
+dependencies:
+  - Jarvis/instructions/rules.md
+  - Jarvis/instructions/about.md
+migration_phase: 3
+migration_notes: This is a critical file that defines core functionality. Create symbolic links during migration to ensure continuous operation. Update any tools or scripts that directly reference this file. 

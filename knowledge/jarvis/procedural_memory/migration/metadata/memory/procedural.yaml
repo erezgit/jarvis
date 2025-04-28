@@ -1,0 +1,8 @@
+current_path: Jarvis/memory/procedural/
+cognitive_path: Cognitive/Memory/Procedural/
+cognitive_function: Storage of skills, techniques, methods, and patterns for accomplishing tasks
+dependencies:
+  - Jarvis/memory/index/
+  - Jarvis/memory/templates/
+migration_phase: 2
+migration_notes: Procedural memory contains skills that may span across domains. In Phase 4, consider creating references to domain-specific skills in the appropriate Domains directories while keeping the core skills here. 

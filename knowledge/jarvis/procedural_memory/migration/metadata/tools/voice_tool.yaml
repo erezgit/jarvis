@@ -1,0 +1,8 @@
+current_path: Jarvis/tools/src/core/voice_generation/
+cognitive_path: Cognitive/Expression/Voice/Implementation/
+cognitive_function: Implementation of voice generation capabilities for spoken communication
+dependencies:
+  - Jarvis/workspace/tools/jarvis_voice.sh
+  - Jarvis/instructions/voice.md
+migration_phase: 3
+migration_notes: Voice tools are part of the Expression cognitive process. Migration should be coordinated with the voice.md instructions file. Ensure the jarvis_voice.sh script is updated to reference the new location. 

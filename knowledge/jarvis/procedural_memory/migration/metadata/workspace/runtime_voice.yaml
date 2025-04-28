@@ -1,0 +1,8 @@
+current_path: Jarvis/workspace/tools/jarvis_voice.sh
+cognitive_path: Workspace/Tools/Voice/jarvis_voice.sh
+cognitive_function: Runtime tool for generating voice responses from text input
+dependencies:
+  - Jarvis/instructions/voice.md
+  - Jarvis/tools/src/core/voice_generation/
+migration_phase: 5
+migration_notes: The runtime voice tool should remain in the Workspace for easy access, but its implementation details should be moved to the Cognitive/Expression area. Update the script to reference the new implementation location. 
