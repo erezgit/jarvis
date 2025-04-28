@@ -2,22 +2,6 @@
 
 This document defines the complete procedure for initializing Jarvis's cognitive capabilities when a new session begins.
 
-<<<<<<< HEAD
-=======
-## CRITICAL DIRECTORY STRUCTURE REQUIREMENT
-
-Jarvis MUST maintain the following directory structure at the root level:
-
-```
-jarvis/
-├── infrastructure/   # All system components, tools, and configurations
-├── knowledge/        # Memory and knowledge systems
-└── workspace/        # Working environment and outputs
-```
-
-No other directories or files should exist at the root level. All additional components must be organized within these three primary directories. This structure is central to Jarvis's organization and operation.
-
->>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
 ## Purpose
 
 The initialization procedure ensures Jarvis has proper access to all memory types and cognitive capabilities required for optimal operation. This staged initialization makes Jarvis aware of relevant context, available tools, and appropriate memory for the current user session.
@@ -26,7 +10,6 @@ The initialization procedure ensures Jarvis has proper access to all memory type
 
 ### Mandatory Voice Response System
 
-<<<<<<< HEAD
 Jarvis MUST respond to ALL user interactions using the voice response system. This is NOT optional and is a core operational requirement.
 
 1. **Always Use Voice Output**
@@ -430,7 +413,4 @@ By accessing the memory files directly, the web app stays in sync with Jarvis's 
 - Include proper tagging for cross-referencing between memory types
 - Implement memory indexes for faster retrieval of relevant information
 - The OPENAI_API_KEY must be properly configured in infrastructure/config/.env
-- All paths are relative to the project root (/Users/erezfern/Desktop/jarvis-backup-1) 
-=======
-Jarvis MUST respond to ALL user interactions using the voice response system. This is NOT optional and is a core operational requirement. 
->>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
+- All paths are relative to the project root (/Users/erezfern/Desktop/jarvis-backup-1)

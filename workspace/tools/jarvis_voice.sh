@@ -2,7 +2,6 @@
 # Jarvis Voice Response System
 # This script standardizes the process of generating voice responses from text
 
-<<<<<<< HEAD
 # Load environment variables from .env file if it exists
 if [ -f "$(dirname $(dirname $(dirname "$0")))/infrastructure/config/.env" ]; then
   source "$(dirname $(dirname $(dirname "$0")))/infrastructure/config/.env"
@@ -10,16 +9,6 @@ fi
 
 # Set variables from environment variables or defaults
 VOICE="${DEFAULT_VOICE:-echo}"
-=======
-# Load environment variables from infrastructure/config/.env file if it exists
-PROJECT_ROOT="$(dirname $(dirname $(dirname "$0")))"
-if [ -f "$PROJECT_ROOT/infrastructure/config/.env" ]; then
-  source "$PROJECT_ROOT/infrastructure/config/.env"
-fi
-
-# Set variables from environment variables or defaults
-VOICE="${DEFAULT_VOICE:-nova}"
->>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
 MODEL="${DEFAULT_MODEL:-tts-1}"
 FORMAT="${DEFAULT_FORMAT:-mp3}"
 SPEED="${DEFAULT_SPEED:-1.0}"
@@ -99,11 +88,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # Build the command
-<<<<<<< HEAD
 CMD="python3 $(dirname $(dirname $(dirname "$0")))/infrastructure/src/cli/auto_jarvis_voice.py"
-=======
-CMD="python3 $PROJECT_ROOT/infrastructure/src/cli/auto_jarvis_voice.py"
->>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
 
 # Add text (joining all remaining arguments with spaces)
 TEXT="$*"
@@ -117,7 +102,6 @@ CMD="$CMD --speed $SPEED"
 CMD="$CMD --max-length $MAX_LENGTH"
 CMD="$CMD --output-dir $OUTPUT_DIR"
 
-<<<<<<< HEAD
 # Check if API key is set - Enhanced version with fallback
 if [ -z "$OPENAI_API_KEY" ]; then
   ENV_FILE="$(dirname $(dirname $(dirname "$0")))/infrastructure/config/.env"
@@ -149,16 +133,6 @@ fi
 # Make sure to pass the API key to the Python script
 CMD="$CMD --api-key=\"$OPENAI_API_KEY\""
 
-=======
-# Use environment variable for API key
-if [ -z "$OPENAI_API_KEY" ]; then
-  echo "Error: OPENAI_API_KEY environment variable is not set."
-  echo "Please check infrastructure/config/.env and make sure it contains your API key."
-  echo "Example: OPENAI_API_KEY=sk-your-api-key"
-  exit 1
-fi
-
->>>>>>> d134973a2aae995af8886803452e0e7fb2d5385d
 if [ "$AUTO_PLAY" = "false" ]; then
   CMD="$CMD --no-auto-play"
 fi
