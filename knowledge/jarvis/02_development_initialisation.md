@@ -301,7 +301,7 @@ When working with multiple projects across different Cursor windows:
 
 2. **Update Remote URL** (if incorrect)
    ```bash
-   git remote set-url origin git@github.com:Glassworks-TLV/glassworks-crm.git
+   git remote set-url origin https://github.com/erezgit/knowledge-assistant.git
    ```
 
 3. **Push Confirmation Process**
